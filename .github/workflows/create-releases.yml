@@ -40,3 +40,4 @@ jobs:
           release: ${{ startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch' }}
           build_targets_linux: "windows, linux"
           architectures_windows: "x64, ia32"
+          architectures_linux: "x64, arm64"

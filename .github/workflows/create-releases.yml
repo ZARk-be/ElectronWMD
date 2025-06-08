@@ -13,7 +13,9 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v4
-      
+      - name: Install gsed on macOS
+        if: matrix.os == 'macos-latest'
+        run: brew install gnu-sed
       - name: Install dependencies
         if: matrix.os == 'ubuntu-22.04'
         run: |
